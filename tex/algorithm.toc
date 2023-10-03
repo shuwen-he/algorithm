@@ -1,0 +1,5 @@
+\contentsline {chapter}{目录}{2}{chapter*.1}%
+\contentsline {section}{\numberline {1}binary tree}{3}{section.0.0.1}%
+\contentsline {section}{\numberline {2}binary search}{3}{section.0.0.2}%
+\contentsline {section}{\numberline {3}bipartite graph}{4}{section.0.0.3}%
+\contentsline {section}{\numberline {4}dijkstra}{4}{section.0.0.4}%
