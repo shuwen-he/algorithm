@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 #include<bits/stdc++.h>
-=======
 #include <iostream>
 #include <fstream>
 #include <
->>>>>>> 088ce7671c6ffa406bb7c91f8b0a29b5745ec605
 
 using namespace std;
 
@@ -16,7 +13,6 @@ int main(){
 	fin>>s;
 	int l = strlen(s);
 	s[l] = ')';
-<<<<<<< HEAD
 	stack<node> n;
 	stack<char> q;
 	q.push('(');
@@ -46,7 +42,6 @@ int main(){
 	}
 	fout<<n.top().v<<endl;
 	fout<<n.top().y<<" "<<n.top().h<<endl;
-=======
 
 	// 0&(1|0)|(1|1|1&0)
 	for(int i = 0; i<=l;i++){
@@ -57,6 +52,5 @@ int main(){
 	fin.close();
 	fout.close();
 
->>>>>>> 088ce7671c6ffa406bb7c91f8b0a29b5745ec605
 	return 0;
 }
