@@ -18,4 +18,5 @@ int main(){
 	cin>>a>>b;
 	int c = max(a,b);
 	cout<<"max num is :"<<c<<'\n';
+	cout<<"max num is :"<<c<<'\n';
 }
