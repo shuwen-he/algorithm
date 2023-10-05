@@ -112,8 +112,8 @@ int main() {
         }
     }
     
-    fout << n.top().v << endl;
-    fout << n.top().y << ' ' << n.top().h << endl;
+    fout << n.top().v <<'\n';
+    fout << n.top().y << ' ' << n.top().h <<'\n';
 
     fin.close();
     fout.close();
