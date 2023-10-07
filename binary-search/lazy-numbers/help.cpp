@@ -12,7 +12,7 @@ int main() {
   while (t--) {
     long long n, k;
     cin >> n >> k;
-    int len = 0;
+    int len = 0; // 以k为底的n的最大位数
 
     long long tmp = n;
     while (tmp > 0) {
@@ -23,23 +23,23 @@ int main() {
     long long lim = (n + 1) / k;
     vector<long long> d;
 
-    auto Get = [&](long long x) {
+    auto Get = [&](long long x) { // 计算表示数字x的位
       d.clear();
       while (x > 0) {
         d.push_back(x % k);
         x /= k;
       }
-      long long L = 1;
-      long long R = d.back();
+      long long l = 1;
+      long long r = d.back();
       long long ret = 0;
       for (int i = 0; i < len; i++) {
-        ret += max(0LL, min(R - (i < (int) d.size() - 1 ? 0 : 1), n) - L + 1);
+        ret += max(0LL, min(r - (i < (int) d.size() - 1 ? 0 : 1), n) - l + 1);
         if (i < len - 1) {
-          L = L * k;
-          if (R > lim) {
-            R = n + 1;
+          l = l * k;
+          if (r > lim) {
+            r = n + 1;
           } else {
-            R = R * k + (i + 1 < (int) d.size() ? d[(int) d.size() - i - 2] : 0);
+            r = r * k + (i + 1 < (int) d.size() ? d[(int) d.size() - i - 2] : 0);
           }
         }
       }
