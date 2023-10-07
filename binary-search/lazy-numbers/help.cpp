@@ -5,22 +5,24 @@ using namespace std;
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(0);
-  int tt;
-  cin >> tt;
 
-  while (tt--) {
+  int t;
+  cin >> t;
+
+  while (t--) {
     long long n, k;
     cin >> n >> k;
     int len = 0;
-    {
-      auto tmp = n;
-      while (tmp > 0) {
-        len += 1;
-        tmp /= k;
-      }
+
+    long long tmp = n;
+    while (tmp > 0) {
+	    len += 1;
+	    tmp /= k;
     }
-    auto lim = (n + 1) / k;
+
+    long long lim = (n + 1) / k;
     vector<long long> d;
+
     auto Get = [&](long long x) {
       d.clear();
       while (x > 0) {
@@ -43,6 +45,7 @@ int main() {
       }
       return ret + 1;
     };
+
     long long L = 1;
     long long R = min(k, n + 1);
     long long ans = 0;
