@@ -2,12 +2,6 @@
 
 using namespace std;
 
-#ifdef LOCAL
-#include "algo/debug.h"
-#else
-#define debug(...) 42
-#endif
-
 template <typename T>
 T inverse(T a, T m) {
   T u = 0, v = 1;

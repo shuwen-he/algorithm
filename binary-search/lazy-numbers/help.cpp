@@ -46,49 +46,48 @@ int main() {
       return ret + 1;
     };
 
-    long long L = 1;
-    long long R = min(k, n + 1);
+    long long l = 1;
+    long long r = min(k, n + 1);
     long long ans = 0;
     for (int p = 1; p <= len; p++) {
-      long long from;
-      {
-        long long low = L;
-        long long high = R;
-        while (low < high) {
-          auto mid = (low + high) >> 1;
-          if (Get(mid) < mid) {
-            low = mid + 1;
-          } else {
-            high = mid;
-          }
-        }
-        from = low;
-      }
-      long long to;
-      {
-        long long low = L - 1;
-        long long high = R - 1;
-        while (low < high) {
-          auto mid = (low + high + 1) >> 1;
-          if (Get(mid) > mid) {
-            high = mid - 1;
-          } else {
-            low = mid;
-          }
-        }
-        to = low;
-      }
-      if (from <= to) {
-        ans += to - from + 1;
-      }
-      if (p < len) {
-        L = L * k;
-        if (R > lim) {
-          R = n + 1;
-        } else {
-          R = R * k;
-        }
-      }
+	    long long from;
+	    
+	    long long low = l;
+	    long long high = r;
+	    while (low < high) {
+		    auto mid = (low + high) >> 1;
+		    if (Get(mid) < mid) {
+			    low = mid + 1;
+		    } else {
+			    high = mid;
+		    }
+	    }
+	    from = low;
+
+	    long long to;
+	    long long low2 = l - 1;
+	    long long high2 = r - 1;
+	    while (low2 < high2) {
+		    auto mid = (low2 + high2 + 1) >> 1;
+		    if (Get(mid) > mid) {
+			    high2 = mid - 1;
+		    } else {
+			    low2 = mid;
+		    }
+	    }
+	    to = low2;
+	    
+	    if (from <= to) {
+		    ans += to - from + 1;
+	    }
+	    if (p < len) {
+		    l = l * k;
+		    if (r > lim) {
+			    r = n + 1;
+		    } else {
+			    r = r * k;
+		    }
+	    }
     }
     cout << ans << '\n';
   }

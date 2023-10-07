@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
 typedef long double ld;
 
 int main() {
@@ -34,6 +33,7 @@ int main() {
       last_opt = opt;
     }
   }
+
   cout << fixed << setprecision(17) << 2 * dp[n][m] + n << '\n';
 
   return 0;
