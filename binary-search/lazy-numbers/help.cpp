@@ -6,7 +6,7 @@ int main() {
   ios::sync_with_stdio(false);
   cin.tie(0);
 
-  int t;
+  int t; // 测试用例数量
   cin >> t;
 
   while (t--) {
