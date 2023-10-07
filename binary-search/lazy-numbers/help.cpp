@@ -2,21 +2,11 @@
 
 using namespace std;
 
-#ifdef LOCAL
-#include "algo/debug.h"
-#else
-#define debug(...) 42
-#endif
-
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(0);
-  int tt;
-  cin >> tt;
-  /*
-  tt = 1;
-  */
-  while (tt--) {
+  int t;
+  cin >> t;
+
+  while (t--) {
     long long n, k;
     cin >> n >> k;
     int len = 0;
@@ -97,6 +87,4 @@ int main() {
     }
     cout << ans << '\n';
   }
-  debug(clock());
-  return 0;
 }
