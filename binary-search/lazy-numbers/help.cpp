@@ -3,10 +3,12 @@
 using namespace std;
 
 int main() {
-  int t;
-  cin >> t;
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  int tt;
+  cin >> tt;
 
-  while (t--) {
+  while (tt--) {
     long long n, k;
     cin >> n >> k;
     int len = 0;
