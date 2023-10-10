@@ -46,10 +46,10 @@ int main() {
       return ret + 1;
     };
 
-    long long l = 1;
-    long long r = min(k, n + 1);
+    long long l = 1; // 当前搜索范围的左边界
+    long long r = min(k, n + 1); // 当前搜索范围的左边界
     long long ans = 0;
-    for (int p = 1; p <= len; p++) {
+    for (int p = 1; p <= len; p++) { // 循环处理每个位数p从1到len
 	    long long from;
 	    
 	    long long low = l;
